@@ -1,0 +1,2 @@
+// Supabase removed. Placeholder.
+export {}

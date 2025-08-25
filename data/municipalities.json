@@ -1,0 +1,12 @@
+[
+  { "pref_code":2, "muni_code":"02201", "name_ja":"青森市", "centroid_lat":40.8222, "centroid_lng":140.7474 },
+  { "pref_code":1, "muni_code":"01100", "name_ja":"札幌市", "centroid_lat":43.0621, "centroid_lng":141.3544 },
+  { "pref_code":4, "muni_code":"04100", "name_ja":"仙台市", "centroid_lat":38.2688, "centroid_lng":140.8721 },
+  { "pref_code":13, "muni_code":"13104", "name_ja":"新宿区", "centroid_lat":35.6938, "centroid_lng":139.7034 },
+  { "pref_code":23, "muni_code":"23106", "name_ja":"名古屋市中区", "centroid_lat":35.1683, "centroid_lng":136.9107 },
+  { "pref_code":26, "muni_code":"26100", "name_ja":"京都市", "centroid_lat":35.0116, "centroid_lng":135.7681 },
+  { "pref_code":27, "muni_code":"27100", "name_ja":"大阪市", "centroid_lat":34.6937, "centroid_lng":135.5023 },
+  { "pref_code":28, "muni_code":"28100", "name_ja":"神戸市", "centroid_lat":34.6901, "centroid_lng":135.1955 },
+  { "pref_code":24, "muni_code":"24204", "name_ja":"松阪市", "centroid_lat":34.5786, "centroid_lng":136.5279 },
+  { "pref_code":21, "muni_code":"21203", "name_ja":"高山市", "centroid_lat":36.1467, "centroid_lng":137.2526 }
+]

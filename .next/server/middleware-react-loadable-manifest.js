@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"components/MapClient.tsx -> ./MapInner\":{\"id\":\"components/MapClient.tsx -> ./MapInner\",\"files\":[\"static/css/_app-pages-browser_components_MapInner_tsx.css\",\"static/chunks/_app-pages-browser_components_MapInner_tsx.js\"]}}"

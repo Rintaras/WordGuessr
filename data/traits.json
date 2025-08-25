@@ -1,0 +1,13 @@
+[
+  { "muni_code":"02201", "trait_type":"specialty", "value":"りんご" },
+  { "muni_code":"02201", "trait_type":"festival", "value":"ねぶた祭" },
+  { "muni_code":"01100", "trait_type":"festival", "value":"雪まつり" },
+  { "muni_code":"04100", "trait_type":"specialty", "value":"ずんだ" },
+  { "muni_code":"13104", "trait_type":"landmark", "value":"高層ビル街" },
+  { "muni_code":"23106", "trait_type":"landmark", "value":"栄・大須" },
+  { "muni_code":"26100", "trait_type":"landmark", "value":"古都の寺社" },
+  { "muni_code":"27100", "trait_type":"food", "value":"粉もん" },
+  { "muni_code":"28100", "trait_type":"landmark", "value":"異人館" },
+  { "muni_code":"24204", "trait_type":"specialty", "value":"松阪牛" },
+  { "muni_code":"21203", "trait_type":"landmark", "value":"合掌造り風景" }
+]
