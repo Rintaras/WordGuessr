@@ -6,11 +6,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/play/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -20,16 +15,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/round/route.js"
-    ],
-    "/api/round/[id]/guess/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/round/[id]/guess/route.js"
-    ],
-    "/api/round/[id]/reveal/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/round/[id]/reveal/route.js"
     ]
   }
 }

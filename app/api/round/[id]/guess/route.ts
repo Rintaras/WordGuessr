@@ -6,16 +6,17 @@ import { haversine, scoreFromDistanceKm } from '../../../../../lib/scoring'
 
 const bodySchema = z.object({ lat: z.number(), lng: z.number() })
 
-export async function POST(req: NextRequest, { params }: { params: { id: string } }){
-  const json = await req.json().catch(()=>null)
+export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const json = await req.json().catch(() => null)
   const parsed = bodySchema.safeParse(json)
-  if(!parsed.success) return NextResponse.json({ error:'invalid body' }, { status:400 })
+  if (!parsed.success) return NextResponse.json({ error: 'invalid body' }, { status: 400 })
   const { lat, lng } = parsed.data
 
   let payload: any
-  try { payload = await verifyRound(params.id) } catch { return NextResponse.json({ error:'invalid round' }, { status:400 }) }
-  const muni = getMunicipalities().find(m=> m.muni_code===payload.muni_code)
-  if(!muni) return NextResponse.json({ error:'muni not found' }, { status:404 })
+  try { payload = await verifyRound(id) } catch { return NextResponse.json({ error: 'invalid round' }, { status: 400 }) }
+  const muni = getMunicipalities().find(m => m.muni_code === payload.muni_code)
+  if (!muni) return NextResponse.json({ error: 'muni not found' }, { status: 404 })
 
   const dKm = haversine(lat, lng, muni.centroid_lat, muni.centroid_lng)
   const isExact = Math.abs(lat - muni.centroid_lat) < 1e-5 && Math.abs(lng - muni.centroid_lng) < 1e-5

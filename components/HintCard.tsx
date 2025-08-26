@@ -1,42 +1,42 @@
 import { motion } from 'framer-motion'
-import { Lightbulb, Clock, Target } from 'lucide-react'
+import { Sparkles, Brain, Trophy } from 'lucide-react'
 
-export default function HintCard({ hint, difficulty }: { hint: string; difficulty: 'easy' | 'normal' | 'hard' }) {
-  const difficultyConfig = {
-    easy: { color: 'from-green-400 to-emerald-600', bg: 'bg-green-50', border: 'border-green-200', icon: Lightbulb },
-    normal: { color: 'from-blue-400 to-indigo-600', bg: 'bg-blue-50', border: 'border-blue-200', icon: Target },
-    hard: { color: 'from-red-400 to-pink-600', bg: 'bg-red-50', border: 'border-red-200', icon: Clock }
-  }
-  
-  const config = difficultyConfig[difficulty]
-  const Icon = config.icon
+type HintCardProps = {
+  hint: string
+  difficulty: 'easy' | 'normal' | 'hard'
+}
+
+const difficultyColors = {
+  easy: { bg: 'bg-emerald-500', text: 'text-emerald-400', icon: Sparkles },
+  normal: { bg: 'bg-purple-500', text: 'text-purple-400', icon: Brain },
+  hard: { bg: 'bg-red-500', text: 'text-red-400', icon: Trophy },
+}
+
+export default function HintCard({ hint, difficulty }: HintCardProps) {
+  const { bg, text, icon: Icon } = difficultyColors[difficulty]
+  const difficultyText = {
+    easy: 'やさしい',
+    normal: 'ふつう',
+    hard: 'むずかしい',
+  }[difficulty]
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`relative overflow-hidden rounded-2xl ${config.bg} ${config.border} border-2 shadow-lg`}
+      transition={{ type: "spring", damping: 20, stiffness: 200 }}
+      className="bg-gray-900 rounded-2xl shadow-2xl p-6 border border-gray-700 max-w-md mx-auto backdrop-blur-sm"
     >
-      <div className="absolute inset-0 bg-gradient-to-r opacity-10 ${config.color}" />
-      <div className="relative p-6">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center space-x-3">
-            <div className={`p-2 rounded-full bg-gradient-to-r ${config.color}`}>
-              <Icon className="w-5 h-5 text-white" />
-            </div>
-            <span className={`text-sm font-semibold bg-gradient-to-r ${config.color} bg-clip-text text-transparent`}>
-              {difficulty.toUpperCase()}
-            </span>
-          </div>
-          <div className="text-xs text-gray-500 bg-white/50 px-3 py-1 rounded-full">
-            ヒント
-          </div>
-        </div>
-        <p className="text-xl font-medium text-gray-800 leading-relaxed">
-          {hint}
-        </p>
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-xl font-bold text-white">ヒント</h2>
+        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${bg} text-white shadow-lg`}>
+          <Icon className="w-3 h-3 mr-1" />
+          {difficultyText}
+        </span>
       </div>
+      <p className="text-gray-200 text-lg leading-relaxed">
+        {hint}
+      </p>
     </motion.div>
   )
 }

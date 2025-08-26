@@ -22,9 +22,9 @@ export default function MapClient(props: MapClientProps) {
       <Inner {...props} />
 
       {/* 地図の説明 */}
-      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-lg border border-gray-200 z-20">
-        <div className="flex items-center space-x-2 text-sm text-gray-700">
-          <MapPin className="w-4 h-4 text-blue-600" />
+      <div className="absolute top-4 left-4 bg-gray-900/90 backdrop-blur-sm rounded-2xl p-3 shadow-2xl border border-gray-700 z-20">
+        <div className="flex items-center space-x-2 text-sm text-gray-200">
+          <MapPin className="w-4 h-4 text-purple-400" />
           <span>
             {props.picked && props.correct
               ? '正解位置と選択位置を比較できます'
@@ -39,7 +39,7 @@ export default function MapClient(props: MapClientProps) {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="absolute bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-2xl shadow-lg flex items-center space-x-2 z-20"
+          className="absolute bottom-4 right-4 bg-purple-500 text-white px-4 py-2 rounded-2xl shadow-2xl flex items-center space-x-2 z-20"
         >
           <Navigation className="w-4 h-4" />
           <span className="text-sm font-medium">位置選択済み</span>
