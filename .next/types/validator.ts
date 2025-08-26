@@ -65,6 +65,12 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   handler satisfies AppPageConfig<"/play">
 }
 
+// Validate ../../app/select-rounds/page.tsx
+{
+  const handler = {} as typeof import("../../app/select-rounds/page.js")
+  handler satisfies AppPageConfig<"/select-rounds">
+}
+
 // Validate ../../app/api/leaderboard/route.ts
 {
   const handler = {} as typeof import("../../app/api/leaderboard/route.js")

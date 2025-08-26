@@ -23,9 +23,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   const score = scoreFromDistanceKm(dKm, isExact)
 
   return NextResponse.json({
-    distance_km: dKm,
+    distance: dKm,
     score,
-    is_exact: isExact,
-    correct: { muni_code: muni.muni_code, name_ja: muni.name_ja, centroid: { lat: muni.centroid_lat, lng: muni.centroid_lng } }
+    correctLocation: {
+      lat: muni.centroid_lat,
+      lng: muni.centroid_lng,
+      name: muni.name_ja
+    }
   })
 }

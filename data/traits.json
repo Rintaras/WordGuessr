@@ -1,13 +1,707 @@
 [
-  { "muni_code":"02201", "trait_type":"specialty", "value":"りんご" },
-  { "muni_code":"02201", "trait_type":"festival", "value":"ねぶた祭" },
-  { "muni_code":"01100", "trait_type":"festival", "value":"雪まつり" },
-  { "muni_code":"04100", "trait_type":"specialty", "value":"ずんだ" },
-  { "muni_code":"13104", "trait_type":"landmark", "value":"高層ビル街" },
-  { "muni_code":"23106", "trait_type":"landmark", "value":"栄・大須" },
-  { "muni_code":"26100", "trait_type":"landmark", "value":"古都の寺社" },
-  { "muni_code":"27100", "trait_type":"food", "value":"粉もん" },
-  { "muni_code":"28100", "trait_type":"landmark", "value":"異人館" },
-  { "muni_code":"24204", "trait_type":"specialty", "value":"松阪牛" },
-  { "muni_code":"21203", "trait_type":"landmark", "value":"合掌造り風景" }
+  {
+    "muni_code": "01100",
+    "trait_type": "festival",
+    "value": "雪まつり"
+  },
+  {
+    "muni_code": "01100",
+    "trait_type": "food",
+    "value": "ジンギスカン"
+  },
+  {
+    "muni_code": "01100",
+    "trait_type": "landmark",
+    "value": "時計台"
+  },
+  {
+    "muni_code": "01100",
+    "trait_type": "climate",
+    "value": "冬の寒さ"
+  },
+  {
+    "muni_code": "02201",
+    "trait_type": "specialty",
+    "value": "りんご"
+  },
+  {
+    "muni_code": "02201",
+    "trait_type": "festival",
+    "value": "ねぶた祭"
+  },
+  {
+    "muni_code": "02201",
+    "trait_type": "food",
+    "value": "せんべい汁"
+  },
+  {
+    "muni_code": "02201",
+    "trait_type": "climate",
+    "value": "北国の風"
+  },
+  {
+    "muni_code": "04100",
+    "trait_type": "specialty",
+    "value": "ずんだ"
+  },
+  {
+    "muni_code": "04100",
+    "trait_type": "food",
+    "value": "牛タン"
+  },
+  {
+    "muni_code": "04100",
+    "trait_type": "landmark",
+    "value": "青葉城"
+  },
+  {
+    "muni_code": "04100",
+    "trait_type": "climate",
+    "value": "東北の中心"
+  },
+  {
+    "muni_code": "05201",
+    "trait_type": "specialty",
+    "value": "きりたんぽ"
+  },
+  {
+    "muni_code": "05201",
+    "trait_type": "festival",
+    "value": "竿燈まつり"
+  },
+  {
+    "muni_code": "05201",
+    "trait_type": "food",
+    "value": "いぶりがっこ"
+  },
+  {
+    "muni_code": "06201",
+    "trait_type": "specialty",
+    "value": "さくらんぼ"
+  },
+  {
+    "muni_code": "06201",
+    "trait_type": "festival",
+    "value": "花笠まつり"
+  },
+  {
+    "muni_code": "06201",
+    "trait_type": "food",
+    "value": "冷やしラーメン"
+  },
+  {
+    "muni_code": "07201",
+    "trait_type": "specialty",
+    "value": "もも"
+  },
+  {
+    "muni_code": "07201",
+    "trait_type": "landmark",
+    "value": "鶴ヶ城"
+  },
+  {
+    "muni_code": "07201",
+    "trait_type": "food",
+    "value": "喜多方ラーメン"
+  },
+  {
+    "muni_code": "08201",
+    "trait_type": "specialty",
+    "value": "納豆"
+  },
+  {
+    "muni_code": "08201",
+    "trait_type": "landmark",
+    "value": "偕楽園"
+  },
+  {
+    "muni_code": "08201",
+    "trait_type": "food",
+    "value": "水戸藩の味"
+  },
+  {
+    "muni_code": "09201",
+    "trait_type": "specialty",
+    "value": "餃子"
+  },
+  {
+    "muni_code": "09201",
+    "trait_type": "food",
+    "value": "宇都宮の味"
+  },
+  {
+    "muni_code": "09201",
+    "trait_type": "landmark",
+    "value": "大谷資料館"
+  },
+  {
+    "muni_code": "10201",
+    "trait_type": "specialty",
+    "value": "こんにゃく"
+  },
+  {
+    "muni_code": "10201",
+    "trait_type": "food",
+    "value": "焼きまんじゅう"
+  },
+  {
+    "muni_code": "10201",
+    "trait_type": "landmark",
+    "value": "群馬の中心"
+  },
+  {
+    "muni_code": "11201",
+    "trait_type": "specialty",
+    "value": "うなぎ"
+  },
+  {
+    "muni_code": "11201",
+    "trait_type": "food",
+    "value": "草加せんべい"
+  },
+  {
+    "muni_code": "11201",
+    "trait_type": "landmark",
+    "value": "鉄道博物館"
+  },
+  {
+    "muni_code": "12201",
+    "trait_type": "specialty",
+    "value": "落花生"
+  },
+  {
+    "muni_code": "12201",
+    "trait_type": "food",
+    "value": "千葉の味"
+  },
+  {
+    "muni_code": "12201",
+    "trait_type": "landmark",
+    "value": "幕張メッセ"
+  },
+  {
+    "muni_code": "13104",
+    "trait_type": "landmark",
+    "value": "高層ビル街"
+  },
+  {
+    "muni_code": "13104",
+    "trait_type": "food",
+    "value": "新宿の味"
+  },
+  {
+    "muni_code": "13104",
+    "trait_type": "culture",
+    "value": "若者の街"
+  },
+  {
+    "muni_code": "14101",
+    "trait_type": "specialty",
+    "value": "シーサイドライン"
+  },
+  {
+    "muni_code": "14101",
+    "trait_type": "food",
+    "value": "横浜中華街"
+  },
+  {
+    "muni_code": "14101",
+    "trait_type": "landmark",
+    "value": "みなとみらい"
+  },
+  {
+    "muni_code": "15101",
+    "trait_type": "specialty",
+    "value": "コシヒカリ"
+  },
+  {
+    "muni_code": "15101",
+    "trait_type": "food",
+    "value": "新潟の味"
+  },
+  {
+    "muni_code": "15101",
+    "trait_type": "landmark",
+    "value": "日本海の港"
+  },
+  {
+    "muni_code": "16201",
+    "trait_type": "specialty",
+    "value": "富山の薬"
+  },
+  {
+    "muni_code": "16201",
+    "trait_type": "food",
+    "value": "富山ブラック"
+  },
+  {
+    "muni_code": "16201",
+    "trait_type": "landmark",
+    "value": "立山連峰"
+  },
+  {
+    "muni_code": "17201",
+    "trait_type": "specialty",
+    "value": "金箔"
+  },
+  {
+    "muni_code": "17201",
+    "trait_type": "food",
+    "value": "金沢カレー"
+  },
+  {
+    "muni_code": "17201",
+    "trait_type": "landmark",
+    "value": "兼六園"
+  },
+  {
+    "muni_code": "18201",
+    "trait_type": "specialty",
+    "value": "越前ガニ"
+  },
+  {
+    "muni_code": "18201",
+    "trait_type": "food",
+    "value": "福井の味"
+  },
+  {
+    "muni_code": "18201",
+    "trait_type": "landmark",
+    "value": "東尋坊"
+  },
+  {
+    "muni_code": "19201",
+    "trait_type": "specialty",
+    "value": "ぶどう"
+  },
+  {
+    "muni_code": "19201",
+    "trait_type": "food",
+    "value": "甲府の味"
+  },
+  {
+    "muni_code": "19201",
+    "trait_type": "landmark",
+    "value": "富士山"
+  },
+  {
+    "muni_code": "20201",
+    "trait_type": "specialty",
+    "value": "そば"
+  },
+  {
+    "muni_code": "20201",
+    "trait_type": "food",
+    "value": "長野の味"
+  },
+  {
+    "muni_code": "20201",
+    "trait_type": "landmark",
+    "value": "善光寺"
+  },
+  {
+    "muni_code": "21203",
+    "trait_type": "landmark",
+    "value": "合掌造り風景"
+  },
+  {
+    "muni_code": "21203",
+    "trait_type": "food",
+    "value": "高山の味"
+  },
+  {
+    "muni_code": "21203",
+    "trait_type": "culture",
+    "value": "古い町並み"
+  },
+  {
+    "muni_code": "22201",
+    "trait_type": "specialty",
+    "value": "お茶"
+  },
+  {
+    "muni_code": "22201",
+    "trait_type": "food",
+    "value": "静岡の味"
+  },
+  {
+    "muni_code": "22201",
+    "trait_type": "landmark",
+    "value": "富士山"
+  },
+  {
+    "muni_code": "23106",
+    "trait_type": "landmark",
+    "value": "栄・大須"
+  },
+  {
+    "muni_code": "23106",
+    "trait_type": "food",
+    "value": "味噌カツ"
+  },
+  {
+    "muni_code": "23106",
+    "trait_type": "culture",
+    "value": "名古屋文化"
+  },
+  {
+    "muni_code": "24204",
+    "trait_type": "specialty",
+    "value": "松阪牛"
+  },
+  {
+    "muni_code": "24204",
+    "trait_type": "food",
+    "value": "松阪の味"
+  },
+  {
+    "muni_code": "24204",
+    "trait_type": "landmark",
+    "value": "三重の中心"
+  },
+  {
+    "muni_code": "25201",
+    "trait_type": "specialty",
+    "value": "近江牛"
+  },
+  {
+    "muni_code": "25201",
+    "trait_type": "food",
+    "value": "大津の味"
+  },
+  {
+    "muni_code": "25201",
+    "trait_type": "landmark",
+    "value": "琵琶湖"
+  },
+  {
+    "muni_code": "26100",
+    "trait_type": "landmark",
+    "value": "古都の寺社"
+  },
+  {
+    "muni_code": "26100",
+    "trait_type": "food",
+    "value": "京料理"
+  },
+  {
+    "muni_code": "26100",
+    "trait_type": "culture",
+    "value": "千年の都"
+  },
+  {
+    "muni_code": "27100",
+    "trait_type": "food",
+    "value": "粉もん"
+  },
+  {
+    "muni_code": "27100",
+    "trait_type": "landmark",
+    "value": "大阪城"
+  },
+  {
+    "muni_code": "27100",
+    "trait_type": "culture",
+    "value": "食い倒れの街"
+  },
+  {
+    "muni_code": "28100",
+    "trait_type": "landmark",
+    "value": "異人館"
+  },
+  {
+    "muni_code": "28100",
+    "trait_type": "food",
+    "value": "神戸牛"
+  },
+  {
+    "muni_code": "28100",
+    "trait_type": "culture",
+    "value": "港町の風"
+  },
+  {
+    "muni_code": "29201",
+    "trait_type": "landmark",
+    "value": "東大寺"
+  },
+  {
+    "muni_code": "29201",
+    "trait_type": "food",
+    "value": "奈良の味"
+  },
+  {
+    "muni_code": "29201",
+    "trait_type": "culture",
+    "value": "古都の文化"
+  },
+  {
+    "muni_code": "30201",
+    "trait_type": "specialty",
+    "value": "みかん"
+  },
+  {
+    "muni_code": "30201",
+    "trait_type": "food",
+    "value": "和歌山の味"
+  },
+  {
+    "muni_code": "30201",
+    "trait_type": "landmark",
+    "value": "和歌山城"
+  },
+  {
+    "muni_code": "31201",
+    "trait_type": "specialty",
+    "value": "二十世紀梨"
+  },
+  {
+    "muni_code": "31201",
+    "trait_type": "food",
+    "value": "鳥取の味"
+  },
+  {
+    "muni_code": "31201",
+    "trait_type": "landmark",
+    "value": "鳥取砂丘"
+  },
+  {
+    "muni_code": "32201",
+    "trait_type": "specialty",
+    "value": "出雲そば"
+  },
+  {
+    "muni_code": "32201",
+    "trait_type": "food",
+    "value": "松江の味"
+  },
+  {
+    "muni_code": "32201",
+    "trait_type": "landmark",
+    "value": "松江城"
+  },
+  {
+    "muni_code": "33201",
+    "trait_type": "specialty",
+    "value": "桃"
+  },
+  {
+    "muni_code": "33201",
+    "trait_type": "food",
+    "value": "岡山の味"
+  },
+  {
+    "muni_code": "33201",
+    "trait_type": "landmark",
+    "value": "岡山城"
+  },
+  {
+    "muni_code": "34201",
+    "trait_type": "specialty",
+    "value": "レモン"
+  },
+  {
+    "muni_code": "34201",
+    "trait_type": "food",
+    "value": "広島焼き"
+  },
+  {
+    "muni_code": "34201",
+    "trait_type": "landmark",
+    "value": "原爆ドーム"
+  },
+  {
+    "muni_code": "35201",
+    "trait_type": "specialty",
+    "value": "夏みかん"
+  },
+  {
+    "muni_code": "35201",
+    "trait_type": "food",
+    "value": "山口の味"
+  },
+  {
+    "muni_code": "35201",
+    "trait_type": "landmark",
+    "value": "山口県庁"
+  },
+  {
+    "muni_code": "36201",
+    "trait_type": "specialty",
+    "value": "すだち"
+  },
+  {
+    "muni_code": "36201",
+    "trait_type": "food",
+    "value": "徳島の味"
+  },
+  {
+    "muni_code": "36201",
+    "trait_type": "festival",
+    "value": "阿波踊り"
+  },
+  {
+    "muni_code": "37201",
+    "trait_type": "specialty",
+    "value": "うどん"
+  },
+  {
+    "muni_code": "37201",
+    "trait_type": "food",
+    "value": "讃岐うどん"
+  },
+  {
+    "muni_code": "37201",
+    "trait_type": "landmark",
+    "value": "高松城"
+  },
+  {
+    "muni_code": "38201",
+    "trait_type": "specialty",
+    "value": "みかん"
+  },
+  {
+    "muni_code": "38201",
+    "trait_type": "food",
+    "value": "松山の味"
+  },
+  {
+    "muni_code": "38201",
+    "trait_type": "landmark",
+    "value": "松山城"
+  },
+  {
+    "muni_code": "39201",
+    "trait_type": "specialty",
+    "value": "かつお"
+  },
+  {
+    "muni_code": "39201",
+    "trait_type": "food",
+    "value": "高知の味"
+  },
+  {
+    "muni_code": "39201",
+    "trait_type": "landmark",
+    "value": "高知城"
+  },
+  {
+    "muni_code": "40201",
+    "trait_type": "specialty",
+    "value": "明太子"
+  },
+  {
+    "muni_code": "40201",
+    "trait_type": "food",
+    "value": "博多ラーメン"
+  },
+  {
+    "muni_code": "40201",
+    "trait_type": "landmark",
+    "value": "福岡タワー"
+  },
+  {
+    "muni_code": "41201",
+    "trait_type": "specialty",
+    "value": "有田焼"
+  },
+  {
+    "muni_code": "41201",
+    "trait_type": "food",
+    "value": "佐賀の味"
+  },
+  {
+    "muni_code": "41201",
+    "trait_type": "landmark",
+    "value": "佐賀城"
+  },
+  {
+    "muni_code": "42201",
+    "trait_type": "specialty",
+    "value": "カステラ"
+  },
+  {
+    "muni_code": "42201",
+    "trait_type": "food",
+    "value": "長崎の味"
+  },
+  {
+    "muni_code": "42201",
+    "trait_type": "landmark",
+    "value": "グラバー園"
+  },
+  {
+    "muni_code": "43201",
+    "trait_type": "specialty",
+    "value": "馬刺し"
+  },
+  {
+    "muni_code": "43201",
+    "trait_type": "food",
+    "value": "熊本の味"
+  },
+  {
+    "muni_code": "43201",
+    "trait_type": "landmark",
+    "value": "熊本城"
+  },
+  {
+    "muni_code": "44201",
+    "trait_type": "specialty",
+    "value": "かぼす"
+  },
+  {
+    "muni_code": "44201",
+    "trait_type": "food",
+    "value": "大分の味"
+  },
+  {
+    "muni_code": "44201",
+    "trait_type": "landmark",
+    "value": "別府温泉"
+  },
+  {
+    "muni_code": "45201",
+    "trait_type": "specialty",
+    "value": "マンゴー"
+  },
+  {
+    "muni_code": "45201",
+    "trait_type": "food",
+    "value": "宮崎の味"
+  },
+  {
+    "muni_code": "45201",
+    "trait_type": "landmark",
+    "value": "青島"
+  },
+  {
+    "muni_code": "46201",
+    "trait_type": "specialty",
+    "value": "さつま揚げ"
+  },
+  {
+    "muni_code": "46201",
+    "trait_type": "food",
+    "value": "鹿児島の味"
+  },
+  {
+    "muni_code": "46201",
+    "trait_type": "landmark",
+    "value": "桜島"
+  },
+  {
+    "muni_code": "47201",
+    "trait_type": "specialty",
+    "value": "泡盛"
+  },
+  {
+    "muni_code": "47201",
+    "trait_type": "food",
+    "value": "沖縄そば"
+  },
+  {
+    "muni_code": "47201",
+    "trait_type": "landmark",
+    "value": "首里城"
+  }
 ]

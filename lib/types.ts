@@ -1,4 +1,4 @@
-export type Difficulty = 'easy'|'normal'|'hard'
+export type Difficulty = 'easy' | 'normal' | 'hard'
 export type Municipality = {
   id: number
   pref_code: number
@@ -10,7 +10,7 @@ export type Municipality = {
   population?: number
   area_km2?: number
 }
-export type TraitType = 'festival'|'specialty'|'landmark'|'history'|'food'
+export type TraitType = 'festival' | 'specialty' | 'landmark' | 'history' | 'food' | 'climate' | 'culture'
 export type Trait = {
   id?: number
   muni_code: string
