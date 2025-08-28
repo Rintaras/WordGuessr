@@ -1,4 +1,4 @@
-// File: /Users/root1/Documents/develop/Contest/2025_U22/WordGuessr/app/page.tsx
+// File: C:\Users\clgin\Documents\WordGuessr\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,6 +1,9 @@
 {
-  "/api/round/route": "app/api/round/route.js",
-  "/play/page": "app/play/page.js",
+<<<<<<< HEAD
   "/page": "app/page.js",
-  "/select-rounds/page": "app/select-rounds/page.js"
+  "/online/page": "app/online/page.js"
+=======
+  "/api/round/route": "app/api/round/route.js",
+  "/play/page": "app/play/page.js"
+>>>>>>> parent of 3b9d104 (差分)
 }

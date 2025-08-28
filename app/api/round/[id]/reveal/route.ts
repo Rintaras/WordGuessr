@@ -12,11 +12,7 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ id:
 
   const traits = getTraitsByMuni(muni.muni_code).slice(0, 3)
   return NextResponse.json({
-    correctLocation: {
-      lat: muni.centroid_lat,
-      lng: muni.centroid_lng,
-      name: muni.name_ja
-    },
-    facts: traits.map(trait => trait.value) || []
+    correct: { muni_code: muni.muni_code, name_ja: muni.name_ja, centroid: { lat: muni.centroid_lat, lng: muni.centroid_lng } },
+    facts: traits || []
   })
 }

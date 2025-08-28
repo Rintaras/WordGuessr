@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Database, Globe, BookOpen, Heart } from 'lucide-react'
 
 export default function About() {
@@ -49,23 +50,35 @@ export default function About() {
   return (
     <div className="min-h-dvh bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-purple-600/5 to-pink-600/5" />
-
+      
       <main className="relative z-10 mx-auto max-w-6xl p-8 space-y-12">
         {/* ヘッダー */}
-        <div className="text-center space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center space-y-4"
+        >
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             About WordGuessr
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             日本の地理と文化を楽しく学べる、AI駆動の地理クイズゲーム
           </p>
-        </div>
+        </motion.div>
 
         {/* 特徴 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           {features.map((feature, i) => (
-            <div
+            <motion.div
               key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * i }}
               className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center`}>
@@ -73,17 +86,25 @@ export default function About() {
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">{feature.title}</h3>
               <p className="text-gray-600 text-sm text-center leading-relaxed">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* データソース */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"
+        >
           <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">オープンデータ出典</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {sources.map((source, i) => (
-              <div
+              <motion.div
                 key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 * i }}
                 className="text-center space-y-3"
               >
                 <h3 className="font-semibold text-gray-800">{source.name}</h3>
@@ -96,20 +117,25 @@ export default function About() {
                 >
                   詳細を見る
                 </a>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* ライセンス */}
-        <div className="text-center space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="text-center space-y-4"
+        >
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">ライセンス・クレジット</h3>
             <p className="text-gray-600">
               各データの配布条件に従います。WordGuessrは教育・学習目的で構築されています。
             </p>
           </div>
-        </div>
+        </motion.div>
       </main>
     </div>
   )

@@ -1,45 +1,27 @@
 "use client"
 import { MapContainer, TileLayer, Marker, Polyline, useMapEvents, Popup } from 'react-leaflet'
-import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
 export type MapInnerProps = {
-  onGuess: (guess: { lat: number; lng: number }) => void
-  correctLocation?: { lat: number; lng: number; name: string } | null
-  userGuess?: { lat: number; lng: number } | null
+  onPick: (lat: number, lng: number) => void
+  picked?: { lat: number; lng: number } | null
+  correct?: { lat: number; lng: number } | null
 }
 
-function Events({ onGuess }: { onGuess: (guess: { lat: number; lng: number }) => void }) {
-  console.log('Events component rendered, onGuess function:', onGuess) // デバッグログ
-
+function Events({ onPick }: { onPick: (lat: number, lng: number) => void }) {
   useMapEvents({
     click(e) {
-      try {
-        const guess = { lat: e.latlng.lat, lng: e.latlng.lng }
-        console.log('Map clicked, sending guess:', guess) // デバッグログ
-        console.log('onGuess function type:', typeof onGuess) // デバッグログ
-
-        if (typeof onGuess === 'function') {
-          onGuess(guess)
-          console.log('Guess sent successfully') // デバッグログ
-        } else {
-          console.error('onGuess is not a function:', onGuess) // エラーログ
-        }
-      } catch (error) {
-        console.error('Error in map click handler:', error) // エラーログ
-      }
+      onPick(e.latlng.lat, e.latlng.lng)
     }
   })
   return null
 }
 
-export default function MapInner({ onGuess, correctLocation, userGuess }: MapInnerProps) {
-  const showBothLocations = userGuess && correctLocation
-
-  console.log('MapInner rendered with:', { onGuess, correctLocation, userGuess, showBothLocations })
+export default function MapInner({ onPick, picked, correct }: MapInnerProps) {
+  const showBothLocations = picked && correct
 
   return (
-    <div className="h-[60vh] w-full">
+    <div className="h-full w-full">
       <MapContainer
         center={[36.2048, 138.2529]}
         zoom={5.3}
@@ -50,12 +32,12 @@ export default function MapInner({ onGuess, correctLocation, userGuess }: MapInn
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Events onGuess={onGuess} />
+        <Events onPick={onPick} />
 
         {/* 選択された位置のピン */}
-        {userGuess && (
+        {picked && (
           <Marker
-            position={[userGuess.lat, userGuess.lng]}
+            position={[picked.lat, picked.lng]}
             icon={L.divIcon({
               className: 'custom-marker',
               html: '<div class="w-6 h-6 bg-blue-500 border-2 border-white rounded-full shadow-lg"></div>',
@@ -67,7 +49,7 @@ export default function MapInner({ onGuess, correctLocation, userGuess }: MapInn
               <div className="text-center">
                 <div className="font-bold text-blue-600">選択した位置</div>
                 <div className="text-sm text-gray-600">
-                  {userGuess.lat.toFixed(4)}, {userGuess.lng.toFixed(4)}
+                  {picked.lat.toFixed(4)}, {picked.lng.toFixed(4)}
                 </div>
               </div>
             </Popup>
@@ -75,9 +57,9 @@ export default function MapInner({ onGuess, correctLocation, userGuess }: MapInn
         )}
 
         {/* 正解位置のピン */}
-        {correctLocation && (
+        {correct && (
           <Marker
-            position={[correctLocation.lat, correctLocation.lng]}
+            position={[correct.lat, correct.lng]}
             icon={L.divIcon({
               className: 'custom-marker',
               html: '<div class="w-6 h-6 bg-green-500 border-2 border-white rounded-full shadow-lg"></div>',
@@ -89,7 +71,7 @@ export default function MapInner({ onGuess, correctLocation, userGuess }: MapInn
               <div className="text-center">
                 <div className="font-bold text-green-600">正解の位置</div>
                 <div className="text-sm text-gray-600">
-                  {correctLocation.lat.toFixed(4)}, {correctLocation.lng.toFixed(4)}
+                  {correct.lat.toFixed(4)}, {correct.lng.toFixed(4)}
                 </div>
               </div>
             </Popup>
@@ -99,7 +81,7 @@ export default function MapInner({ onGuess, correctLocation, userGuess }: MapInn
         {/* 距離を示す線 */}
         {showBothLocations && (
           <Polyline
-            positions={[[userGuess.lat, userGuess.lng], [correctLocation.lat, correctLocation.lng]]}
+            positions={[[picked.lat, picked.lng], [correct.lat, correct.lng]]}
             color="#ef4444"
             weight={4}
             opacity={0.9}
@@ -119,6 +101,10 @@ export default function MapInner({ onGuess, correctLocation, userGuess }: MapInn
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               <span className="text-gray-700">正解位置</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-1 bg-red-500 rounded-full"></div>
+              <span className="text-gray-700">距離線</span>
             </div>
           </div>
         </div>

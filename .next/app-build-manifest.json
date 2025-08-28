@@ -6,16 +6,17 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+<<<<<<< HEAD
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/select-rounds/page": [
+    "/online/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/select-rounds/page.js"
-    ],
+      "static/chunks/app/online/page.js"
+=======
     "/play/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -25,6 +26,7 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/round/route.js"
+>>>>>>> parent of 3b9d104 (差分)
     ]
   }
 }

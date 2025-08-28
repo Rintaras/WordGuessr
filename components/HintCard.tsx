@@ -28,7 +28,7 @@ export default function HintCard({ hint, difficulty }: HintCardProps) {
       className="bg-gray-900 rounded-2xl shadow-2xl p-6 border border-gray-700 max-w-md mx-auto backdrop-blur-sm"
     >
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-bold text-white">問題</h2>
+        <h2 className="text-xl font-bold text-white">ヒント</h2>
         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${bg} text-white shadow-lg`}>
           <Icon className="w-3 h-3 mr-1" />
           {difficultyText}
