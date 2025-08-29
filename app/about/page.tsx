@@ -1,3 +1,4 @@
+"use client"
 import { motion } from 'framer-motion'
 import { Database, Globe, BookOpen, Heart } from 'lucide-react'
 

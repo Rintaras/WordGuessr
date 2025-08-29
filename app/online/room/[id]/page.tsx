@@ -4,10 +4,10 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { getSupabase } from '../../../../lib/supabase'
 import { computeTimeMultiplier, type MatchLength } from '../../../../lib/types'
 
-export default function RoomPage({ params }: { params: { id: string } }) {
+export default function RoomPage({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter()
   const search = useSearchParams()
-  const roomId = params.id
+  const [roomId, setRoomId] = useState<string>('')
   const rounds = (parseInt(search.get('rounds') || '0') || undefined) as MatchLength | undefined
   const [participants, setParticipants] = useState<string[]>([])
   const [host, setHost] = useState<boolean>(false)
@@ -18,6 +18,13 @@ export default function RoomPage({ params }: { params: { id: string } }) {
   const supabase = useMemo(() => getSupabase(), [])
   const channel = useMemo(() => (supabase ? supabase.channel(`room:${roomId}`) : null), [roomId, supabase])
   const timerRef = useRef<NodeJS.Timeout | null>(null)
+
+  // paramsからroomIdを取得
+  useEffect(() => {
+    params.then(({ id }) => {
+      setRoomId(id)
+    })
+  }, [params])
 
   useEffect(() => {
     const sub = async () => {
@@ -66,6 +73,18 @@ export default function RoomPage({ params }: { params: { id: string } }) {
 
   const elapsedMs = startAtMs ? Math.max(0, nowMs - startAtMs) : 0
   const multiplier = computeTimeMultiplier(elapsedMs)
+
+  // roomIdが読み込まれるまでローディング表示
+  if (!roomId) {
+    return (
+      <div className="min-h-dvh bg-gray-900 text-white p-6 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-xl">読み込み中...</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-dvh bg-gray-900 text-white p-6">

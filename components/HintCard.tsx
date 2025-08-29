@@ -25,16 +25,16 @@ export default function HintCard({ hint, difficulty }: HintCardProps) {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ type: "spring", damping: 20, stiffness: 200 }}
-      className="bg-gray-900 rounded-2xl shadow-2xl p-6 border border-gray-700 max-w-md mx-auto backdrop-blur-sm"
+      className="bg-gray-900 rounded-xl shadow-xl p-4 border border-gray-700 max-w-sm mx-auto backdrop-blur-sm"
     >
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-bold text-white">ヒント</h2>
-        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${bg} text-white shadow-lg`}>
+      <div className="flex items-center justify-between mb-3">
+        <h2 className="text-lg font-bold text-white">ヒント</h2>
+        <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold ${bg} text-white shadow-lg`}>
           <Icon className="w-3 h-3 mr-1" />
           {difficultyText}
         </span>
       </div>
-      <p className="text-gray-200 text-lg leading-relaxed">
+      <p className="text-gray-200 text-base leading-relaxed">
         {hint}
       </p>
     </motion.div>

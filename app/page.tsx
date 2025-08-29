@@ -72,7 +72,7 @@ export default function Page() {
 
           {/* プレイ開始ボタン */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <Link href="/select-rounds" className="group relative overflow-hidden block">
+            <Link href="/play" className="group relative overflow-hidden block">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl transition-all duration-300 group-hover:scale-105 shadow-2xl" />
               <div className="relative p-8 text-center text-white">
                 <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">

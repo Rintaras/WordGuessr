@@ -17,19 +17,11 @@ export default function MapClient(props: MapClientProps) {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative z-10"
+      className="relative z-10 h-full"
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="w-full h-full bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden">
         <Inner {...props} />
       </div>
-=======
-      <Inner {...props} />
->>>>>>> parent of 3b9d104 (差分)
-=======
-      <Inner {...props} />
->>>>>>> parent of 3b9d104 (差分)
 
       {/* 地図の説明 */}
       <div className="absolute top-4 left-4 bg-gray-900/90 backdrop-blur-sm rounded-2xl p-3 shadow-2xl border border-gray-700 z-20">

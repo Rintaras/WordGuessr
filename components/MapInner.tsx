@@ -1,6 +1,6 @@
 "use client"
 import { MapContainer, TileLayer, Marker, Polyline, useMapEvents, Popup } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
+import { divIcon } from 'leaflet'
 
 export type MapInnerProps = {
   onPick: (lat: number, lng: number) => void
@@ -26,7 +26,7 @@ export default function MapInner({ onPick, picked, correct }: MapInnerProps) {
         center={[36.2048, 138.2529]}
         zoom={5.3}
         style={{ height: '100%', width: '100%' }}
-        className="rounded-2xl"
+        className="rounded-2xl h-full w-full"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -38,7 +38,7 @@ export default function MapInner({ onPick, picked, correct }: MapInnerProps) {
         {picked && (
           <Marker
             position={[picked.lat, picked.lng]}
-            icon={L.divIcon({
+            icon={divIcon({
               className: 'custom-marker',
               html: '<div class="w-6 h-6 bg-blue-500 border-2 border-white rounded-full shadow-lg"></div>',
               iconSize: [24, 24],
@@ -60,7 +60,7 @@ export default function MapInner({ onPick, picked, correct }: MapInnerProps) {
         {correct && (
           <Marker
             position={[correct.lat, correct.lng]}
-            icon={L.divIcon({
+            icon={divIcon({
               className: 'custom-marker',
               html: '<div class="w-6 h-6 bg-green-500 border-2 border-white rounded-full shadow-lg"></div>',
               iconSize: [24, 24],
